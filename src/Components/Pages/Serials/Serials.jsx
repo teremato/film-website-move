@@ -2,6 +2,7 @@ import React from "react";
 import { FilmPost } from "../../FilmPost/FilmPost";
 
 import {title} from "../../../Data/dataSerials"
+
 import classes from "./Serials.module.css"
 
 export const Serials = () => {
