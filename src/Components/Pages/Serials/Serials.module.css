@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+}
+.type {
+    cursor: pointer;
+
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+    background-color: rgb(76, 69, 177);
+    color: white;
+
+    box-shadow: 0 5px 8px rgba(0, 0, 0, .3);
+}
