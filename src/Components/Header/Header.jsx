@@ -5,13 +5,6 @@ import classes from "./Header.module.css"
 
 export const Header = () => {
 
-    const nav = [
-        {name: "Фильмы", links: "/films"},
-        {name: "Сериалы", links: "/serials"},
-        {name: "Мультфильмы", links: "/animation"},
-        {name: "Подоборки", links: "/collection"}
-    ]
-
     return (
         <header className={classes.header}>
             <div className={classes.logo_container}>
@@ -20,15 +13,12 @@ export const Header = () => {
                 </div>
             </div>
             <nav className={classes.nav}>
-                {
-                    nav.map((item) => {
-                        return (
-                            <div className={classes.link}>
-                                <NavLink className={classes.nav_link} to={item.links}>{item.name}</NavLink>
-                            </div>
-                        )
-                    })
-                }
+                <div className={classes.nav_bar}>
+                    <NavLink className={(navData) => navData.isActive ? classes.active : ""} to={"/films"}>Фильмы</NavLink>
+                    <NavLink className={(navData) => navData.isActive ? classes.active : ""} to={"/serials"}>Сериалы</NavLink>
+                    <NavLink className={(navData) => navData.isActive ? classes.active : ""} to={"/animation"}>Мультфильмы</NavLink>
+                    <NavLink className={(navData) => navData.isActive ? classes.active : ""} to={"/collection"}>Подборки</NavLink>
+                </div>
             </nav>
             <input className={classes.input} placeholder="Искать..."></input>
             <button className={classes.button}>Войти</button>
