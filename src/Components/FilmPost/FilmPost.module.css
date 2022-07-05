@@ -9,22 +9,25 @@
     box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
 }
 .name {
-    width: 100%;
+    width: 95%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 
+    padding: 5px;
     text-align: center;
 
     color: white;
 }
 .like {
 
+    display: flex;
+    align-items: center;
+
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
 
-    padding: 5px;
 
     color: white;
 }
@@ -35,6 +38,6 @@
     
 
     background: rgba(0,0,0,.6);
-    
 }
+
 

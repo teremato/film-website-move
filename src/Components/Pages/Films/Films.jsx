@@ -3,12 +3,13 @@ import {FilmPost} from "../../FilmPost/FilmPost"
 
 import classes from "./Film.module.css"
 
-import { filmTitile } from "../../../Data/dataFilm";
 
-export const Films = () => {
+export const Films = ({dataFilms}) => {
 
-    const data = filmTitile;
-    const topList = data.sort((a, b) => b.likes - a.likes);
+    const topList = dataFilms.map((item) => {
+        return item
+    })
+    topList.sort((a, b) => b.likes - a.likes)
 
     return (
         <section>
@@ -26,7 +27,7 @@ export const Films = () => {
                 <div className={classes.type}>Комедийные {`>`} </div>
                 <div className={classes.container}>
                     {
-                        data.map((item) => {
+                        dataFilms.map((item) => {
                             if (item.genres == "Комедия"){return <FilmPost {...item}/>}
                         })
                     }
@@ -36,7 +37,7 @@ export const Films = () => {
                 <div className={classes.type}>Драммы {`>`} </div>
                 <div className={classes.container}>
                     {
-                        data.map((item) => {
+                        dataFilms.map((item) => {
                             if (item.genres == "Драмма"){return <FilmPost {...item}/>}
                         })
                     }

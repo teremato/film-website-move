@@ -1,13 +1,10 @@
 import React from "react";
+import { Slider } from "./Slider/Slider";
 
 import classes from "./Home.module.css"
 
-import { Slider } from "./Slider/Slider";
-import {title} from "../../../Data/dataSerials"
 
-export const Home = () => {
-
-    const data = title;
+export const Home = ({data}) => {
     
     return (
         <section>

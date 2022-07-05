@@ -1,14 +1,14 @@
 import React from "react";
 import { FilmPost } from "../../FilmPost/FilmPost";
 
-import {title} from "../../../Data/dataSerials"
-
 import classes from "./Serials.module.css"
 
-export const Serials = () => {
+export const Serials = ({dataSerials}) => {
     
-    const data = title;
-    const topList = data.sort((a, b) => b.likes - a.likes)
+    const topList = dataSerials.map((item) => {
+        return item
+    })
+    topList.sort((a, b) => b.likes - a.likes)
 
     return (
         <section>
@@ -26,7 +26,7 @@ export const Serials = () => {
                 <div className={classes.type}>Комедийные {`>`} </div>
                 <div className={classes.container}>
                     {
-                        data.map((item) => {
+                        dataSerials.map((item) => {
                             if (item.genres == "Комедия"){return <FilmPost {...item}/>}
                         })
                     }
@@ -36,7 +36,7 @@ export const Serials = () => {
                 <div className={classes.type}>Драммы {`>`} </div>
                 <div className={classes.container}>
                     {
-                        data.map((item) => {
+                        dataSerials.map((item) => {
                             if (item.genres == "Драмма"){return <FilmPost {...item}/>}
                         })
                     }
